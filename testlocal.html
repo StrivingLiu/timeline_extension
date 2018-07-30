@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+      <link rel="stylesheet" href="css/load-timeline.css" type="text/css">
+  </head>
+  <body>
+    <script>
+        function createTimeline() {
+          var container=document.createElement("iframe");
+          container.id="timeline-container";
+          container.src= "html/timeline-display.html";
+            //container.style.setAttribute("border","#e6e7e8 1px solid");
+            //container.setAttribute("position","fixed");
+            //container.style.buttom = divbuttom+"px";
+            //container.style.left = divleft+"px";
+            //container.setAttribute("z-index","150");
+            //container.setAttribute("height","256px");
+            //container.setAttribute("width","100%");
+            //container.setAttribute("color","#535886");
+            //container.setAttribute("padding","15px");
+            //container.style.backgroundColor= "rgba(220,229,239,0.9)";
+          document.body.appendChild(container);
+
+          var timeline=document.createElement("div");
+          timeline.id="timeline-widget";
+          timeline.style="height: 230px; border: 1px solid #aff"
+          container.appendChild(timeline);
+          //onLoad();
+          /*
+          window.onload=function(){
+              onLoad();
+          }
+          */
+        }
+        createTimeline();
+    </script>
+    <div id="bd" role="main">
+      <h1>Local Timeline Example</h1>
+      <div class="yui-g">
+        <p>To move the Timeline: use the mouse scroll wheel, the arrow keys or grab and drag the Timeline.</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+#timeline-container{
+    /*display: none;*/
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 150;
+    height: 300px;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: #535886;
+    background: rgba(220,229,239,0.9);
+}
