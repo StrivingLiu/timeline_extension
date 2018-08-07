@@ -1,8 +1,11 @@
 $(function () {
     $("#startParse").click(function () {
-        console.log("bbb");
+        var receiveData=$("#inputData").val();
+        if(!receiveData){
+            receiveData="inputOriginal";
+        }
         chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, { action: "start" }, function (response) {
+            chrome.tabs.sendMessage(tabs[0].id, { action: "start",data: receiveData}, function (response) {
                 var win = chrome.extension.getBackgroundPage();
                 win.data=response;
                 console.log(response);
